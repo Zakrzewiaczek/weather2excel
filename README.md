@@ -2,7 +2,7 @@
 This is a program for entering current weather data into an 
 Excel spreadsheet (Excel must be installed on your computer)
 
-##Functions
+## Functions
 <table> 
   <tr>
     <td><tt>make_worksheet</tt></td>
@@ -51,10 +51,10 @@ Excel spreadsheet (Excel must be installed on your computer)
   </tr>
 </table>
 
-##How to use?
+## How to use?
 Paste the code from functions.ps1 into the powershell console, press Enter. 
 Now you can enter the above commands into the powershell console.
 
-##Example usage
+## Example usage
 Create a folder on your desktop called "Weather", then copy the code from code.ps1 and then paste it into the powershell console.
-The program is designed to operate 24 hours a day, 7 days a week. At the following hours (5, 9, 13, 17, 21) he enters the appropriate data into the sheets.
+**The program is designed to operate 24 hours a day, 7 days a week.** At the following hours (5, 9, 13, 17, 21) he enters the appropriate data into the sheets.
