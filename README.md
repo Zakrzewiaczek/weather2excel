@@ -226,10 +226,11 @@ where **YOUR_LANGUAGE** is your lang code
 </table>
 
 ## How to use?
-Download ```code.ps1``` program, change "YOUR_API_KEY" to your weatherapi.com API Key and "YOUR_CITY_NAME" to your city name.
+Download ```function.ps1``` program, change "YOUR_API_KEY" to your weatherapi.com API Key and "YOUR_CITY_NAME" to your city name.
 Then, copy this code into the powershell console, press Enter. 
 Now you can enter the above commands into the powershell console.
 
 ## Example usage
-Copy the code from code.ps1 and then paste it into the powershell console. That's all you need to do :)
+Download ```code.ps1``` program, change "YOUR_API_KEY" to your weatherapi.com API Key and "YOUR_CITY_NAME" to your city name.
+Then, copy this code into the powershell console, press Enter. 
 **The program is designed to operate 24 hours a day, 7 days a week.** At the following hours (5, 9, 13, 17, 21) he enters the appropriate data into the sheets.
