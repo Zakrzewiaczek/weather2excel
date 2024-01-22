@@ -4,7 +4,7 @@ Excel spreadsheet (Excel must be installed on your computer)
 
 ##Functions
 
-</table> 
+<table> 
   <tr>
     <td><tt>Send-HappyBirthday</tt></td>
 	<td>Start playing Happy Birthday using console beeps.</td>
