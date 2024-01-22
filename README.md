@@ -8,6 +8,5 @@ Excel spreadsheet (Excel must be installed on your computer)
   <tr>
     <td><tt>Send-HappyBirthday</tt></td>
 	<td>Start playing Happy Birthday using console beeps.</td>
-           <td>Parameter -path</td>
   </tr>
 </table>
