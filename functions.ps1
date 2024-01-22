@@ -86,7 +86,7 @@ $excel = New-Object -ComObject Excel.Application
 $workbook = $excel.Workbooks.Open($path)
 $worksheet = $workbook.Worksheets.Item($worksheet_name)
 
-$URL = "https://api.weatherapi.com/v1/current.json?key=$APIKey&q=$City&aqi=yes&lang=pl"
+$URL = "https://api.weatherapi.com/v1/current.json?key=$APIKey&q=$City&aqi=yes"
 
 $WeatherData = Invoke-RestMethod -Uri $URL -Method Get
 
