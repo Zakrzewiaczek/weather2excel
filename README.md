@@ -56,5 +56,5 @@ Paste the code from functions.ps1 into the powershell console, press Enter.
 Now you can enter the above commands into the powershell console.
 
 ## Example usage
-Create a folder on your desktop called "Weather", then copy the code from code.ps1 and then paste it into the powershell console.
+Copy the code from code.ps1 and then paste it into the powershell console. That's all you need to do :)
 **The program is designed to operate 24 hours a day, 7 days a week.** At the following hours (5, 9, 13, 17, 21) he enters the appropriate data into the sheets.
