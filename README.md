@@ -19,7 +19,7 @@ Excel spreadsheet (Excel must be installed on your computer)
           <td><tt>-path</tt>  Path of the file into which the data is to be entered (eg. $home\Desktop\test.xlsx)</td>
 	         <td><tt>-row</tt>  Row into which we enter data (e.g. row 1 is the first empty line to enter data)</td>
 	            <td><tt>-worksheet_name</tt>  Name of the page to which we want to enter data</td>
-	               <td>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<tt>-APIKey</tt> Your API keyㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</td>
+	               <td>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<tt>-APIKey</tt> Your weatherapi.com API Keyㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</td>
 	                  <td><tt>-City</tt>  City you want to enter weather data from</td>
   </tr>
   <tr>
@@ -226,7 +226,8 @@ where **YOUR_LANGUAGE** is your lang code
 </table>
 
 ## How to use?
-Paste the code from functions.ps1 into the powershell console, press Enter. 
+Download ```code.ps1``` program, change "YOUR_API_KEY" to your weatherapi.com API Key and "YOUR_CITY_NAME" to your city name.
+Then, copy this code into the powershell console, press Enter. 
 Now you can enter the above commands into the powershell console.
 
 ## Example usage
