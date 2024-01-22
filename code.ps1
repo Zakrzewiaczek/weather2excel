@@ -220,6 +220,8 @@ open_and_write -path (Join-Path (Get-Location) ((Get-Date).Day.ToString() + ".xl
 
 Set-Location -Path "$home\Desktop"
 go_to_folder -folder_name "Weather"
+go_to_folder -folder_name ((Get-Date).Year)
+go_to_folder -folder_name (Get-Date -Format "MMMM")
 
 while($true) {
 
