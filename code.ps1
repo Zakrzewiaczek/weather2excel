@@ -2,6 +2,13 @@ function map($value, $fromLow, $fromHigh, $toLow, $toHigh) {
     return ($value - $fromLow) * ($toHigh - $toLow) / ($fromHigh - $fromLow) + $toLow
 }
 
+function Check-Time {
+    $hour = (Get-Date).Hour
+    while($hour -ne 5 -or $hour -ne 9 -or $hour -ne 13 -or $hour -ne 19 -or $hour -ne 21) {
+        Start-Sleep -Second 10
+    }
+}
+
 function make_worksheet {
     param (
         [string]$path,
@@ -88,11 +95,12 @@ $worksheet = $workbook.Worksheets.Item($worksheet_name)
 
 $URL = "https://api.weatherapi.com/v1/current.json?key=$APIKey&q=$City&aqi=yes"
 
+Write-Host "Downloading data"
 $WeatherData = Invoke-RestMethod -Uri $URL -Method Get
 
 #wpisywanie danych z weatherapi.com
 
-#ikona pogody
+Write-Host "Entering data"
 
 $web = "https:" + ($WeatherData.current.condition.icon)
 $webClient = New-Object System.Net.WebClient
@@ -209,10 +217,11 @@ param (
     )
 
 if (-not (Test-Path (Join-Path (Get-Location) ((Get-Date).Day.ToString() + ".xlsx")))) {
+    Write-Host "Creating file"
     make_worksheet -path (Join-Path (Get-Location) ((Get-Date).Day.ToString() + ".xlsx")) -worksheet_name $worksheet_name
 }
 
-open_and_write -path (Join-Path (Get-Location) ((Get-Date).Day.ToString() + ".xlsx")) -worksheet_name $worksheet_name -row $row -APIKey 7aeb5673292d463786164127241401 -City Nasielsk
+open_and_write -path (Join-Path (Get-Location) ((Get-Date).Day.ToString() + ".xlsx")) -worksheet_name $worksheet_name -row $row -APIKey "YOUR_API_KEY" -City "YOUR_CITY_NAME"
 
 }
 
@@ -223,11 +232,36 @@ go_to_folder -folder_name "Weather"
 go_to_folder -folder_name ((Get-Date).Year)
 go_to_folder -folder_name (Get-Date -Format "MMMM")
 
+Check-Time
+
+for ($i = ((Get-Date).Hour); $i -le 21; $i += 4) {
+    wait_until_hour -wait_until_hour $i -waiting_until $true
+
+    clear
+    Write-Host "Time ${i}:00"
+
+    enter_data -row (($i-1)/4) -worksheet_name "Data"
+    Write-Host "Entering data finished"
+
+    wait_until_hour -wait_until_hour $i -waiting_until $false
+
+    Set-Location -Path "$home\Desktop\Weather"
+
+    go_to_folder -folder_name ((Get-Date).Year)
+    go_to_folder -folder_name (Get-Date -Format "MMMM")
+}
+
 while($true) {
 
 for ($i = 5; $i -le 21; $i += 4) {
     wait_until_hour -wait_until_hour $i -waiting_until $true
-    enter_data -rzad (($i-1)/4)
+
+    clear
+    Write-Host "Time ${i}:00"
+
+    enter_data -row (($i-1)/4) -worksheet_name "Data"
+    Write-Host "Entering data finished"
+
     wait_until_hour -wait_until_hour $i -waiting_until $false
 
     Set-Location -Path "$home\Desktop\Weather"
