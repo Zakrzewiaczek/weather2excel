@@ -55,6 +55,7 @@ Excel spreadsheet (Excel must be installed on your computer)
 Change line 89 (```$URL = "https://api.weatherapi.com/v1/current.json?key=$APIKey&q=$City&aqi=yes"```) to this:
 ```$URL = "https://api.weatherapi.com/v1/current.json?key=$APIKey&q=$City&aqi=yes&lang=YOUR_LANGUAGE"```, 
 where **YOUR_LANGUAGE** is your langcode
+
 **All available langcodes are in the table below:**
 
 <table>
