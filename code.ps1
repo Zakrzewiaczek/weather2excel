@@ -212,7 +212,7 @@ if (-not (Test-Path (Join-Path (Get-Location) ((Get-Date).Day.ToString() + ".xls
     make_worksheet -path (Join-Path (Get-Location) ((Get-Date).Day.ToString() + ".xlsx")) -worksheet_name $worksheet_name
 }
 
-open_and_write -path (Join-Path (Get-Location) ((Get-Date).Day.ToString() + ".xlsx")) -worksheet_name $worksheet_name -rzad $row -APIKey 7aeb5673292d463786164127241401 -City Nasielsk
+open_and_write -path (Join-Path (Get-Location) ((Get-Date).Day.ToString() + ".xlsx")) -worksheet_name $worksheet_name -row $row -APIKey 7aeb5673292d463786164127241401 -City Nasielsk
 
 }
 
