@@ -139,7 +139,7 @@ if ($WeatherData.current.humidity -gt 50) {
 $worksheet.Cells.Item($row + 1, 7).Value2 = $WeatherData.current.pressure_mb.ToString() + " hPa"
 $worksheet.Cells.Item($row + 1, 8).Value2 = $WeatherData.current.wind_kph.ToString() + " km/h"
 $worksheet.Cells.Item($row + 1, 9).Value2 = $WeatherData.current.wind_degree.ToString() + "° (" + $WeatherData.current.wind_dir.ToString() + ")"
-$worksheet.Cells.Item($row + 1, 10).Value2 = "Rodzaj chmur"
+$worksheet.Cells.Item($row + 1, 10).Value2 = "Not supported (work in progress)"
 $worksheet.Cells.Item($row + 1, 11).Value2 = $WeatherData.current.cloud.ToString() + "%"
 $worksheet.Cells.Item($row + 1, 12).Value = $WeatherData.current.uv
 $worksheet.Cells.Item($row + 1, 13).Value = $WeatherData.current.air_quality.co
